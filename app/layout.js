@@ -35,7 +35,6 @@ export default function RootLayout({ children }) {
             <ToastContainer />
             <Nav />
             {children}
-            <Analytics />
           </FinanceContextProvider>
         </AuthContextProvider> 
       </body>
