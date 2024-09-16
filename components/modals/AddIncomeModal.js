@@ -68,12 +68,12 @@ function AddIncomeModal({show, onClose}){
             </div>
 
             <div className="flex flex-col gap-4">
-                <label htmlFor="Description">Name</label>
+                <label htmlFor="Description">Description</label>
                 <input 
                 type="text"
                 ref={descriptionRef}
                 name="Description"  
-                placeholder="Enter income name" 
+                placeholder="Enter income description" 
                 required
                 />
             </div>
