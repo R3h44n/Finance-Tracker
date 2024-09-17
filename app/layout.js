@@ -10,8 +10,7 @@ import "./globals.css";
 //Context
 import FinanceContextProvider from "@/lib/store/context-api";
 import AuthContextProvider from "@/lib/store/auth-context";
-//Nextjs
-import Script from "next/script";
+//Vercel Analytics
 import { Analytics } from "@vercel/analytics/react"
 
 const geistSans = localFont({
@@ -28,9 +27,6 @@ const geistMono = localFont({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
