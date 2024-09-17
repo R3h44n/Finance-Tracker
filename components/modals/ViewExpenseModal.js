@@ -69,7 +69,7 @@ function ViewExpenseModal({show, onClose, expense}){
                                 <button onClick={() => {
                                     deleteExpenseItemHandler(item)
                                 }}>
-                                    <FaTrashAlt color="#cb4335"/>
+                                    <FaTrashAlt className="delete"/>
                                 </button>
                             </p>
                         </div>

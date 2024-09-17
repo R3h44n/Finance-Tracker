@@ -65,8 +65,9 @@ function AddExpensesModal({show, onClose}){
     return (
     <Modal show={show} onClose={onClose}>
         <div className="flex flex-col gap-4">
-            <label>Enter an amount...</label>
-            <input 
+            <label className="font-barlow">Enter an amount...</label>
+            <input
+                className="font-barlow" 
                 type="number"
                 min={0.01}
                 step={0.01}
@@ -82,7 +83,7 @@ function AddExpensesModal({show, onClose}){
         {expenseAmount > 0 && (
             <div className="flex flex-col gap-4 mt-6">
                 <div className="flex items-center justify-between">
-                    <h3 className="text-2xl capitalize">Select expense category</h3>
+                    <h3 className="text-2xl capitalize font-barlow">Select expense category</h3>
                     <button 
                         onClick={() => {
                             setShowAddExpense(true)
@@ -94,15 +95,15 @@ function AddExpensesModal({show, onClose}){
                 </div>
 
                 {showAddExpense && (
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between font-barlow">
                         <input
                             type="text"
                             placeholder="Enter Title"
                             ref={titleRef}
                         />
-                        <label>Pick color</label>
-                        <input type="color" className="w-24 h-10"ref={colorRef} />
-                        <button onClick={addCategoryHandler} className="btn btn-secondary">Create</button>
+                        <label className="text-center sm:text-center lg:text-center font-barlow">Pick color</label>
+                        <input type="color" className="sm:max-w-xl w-24 h-10"ref={colorRef} />
+                        <button onClick={addCategoryHandler} className="btn btn-secondary font-barlow">Create</button>
                         <button 
                             onClick={() => {
                                 setShowAddExpense(false);

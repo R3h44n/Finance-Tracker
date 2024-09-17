@@ -8,7 +8,7 @@ function Modal({show, onClose, children}){
             }}
             className="absolute top-0 left-0 w-full h-full z-10 transition-all duration-500"
         >
-            <div className="container mx-auto max-w-2xl h-[80vh] rounded-3xl bg-slate-800 py-6 px-4">
+            <div className="container mx-auto max-w-2xl h-[80vh] rounded-3xl bg-slate-800 py-6 px-4 overflow-y-auto">
                 <button onClick={() => {
                     onClose(false);
                     }}
@@ -16,7 +16,9 @@ function Modal({show, onClose, children}){
                 >
                     X
                 </button>
-                {children}
+                <div className="overflow-y-auto">
+                    {children}
+                </div>
             </div>
         </div>
     );

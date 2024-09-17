@@ -38,7 +38,7 @@ function Nav(){
                             </a>
                         </div>
                         <div>
-                            <button onClick={logout} className="btn btn-danger">
+                            <button onClick={logout} className="btn btn-danger font-semibold">
                                 Sign out
                             </button>
                         </div>

@@ -68,12 +68,12 @@ function AddIncomeModal({show, onClose}){
             </div>
 
             <div className="flex flex-col gap-4">
-                <label htmlFor="Description">Description</label>
+                <label htmlFor="Description">Name</label>
                 <input 
                 type="text"
                 ref={descriptionRef}
                 name="Description"  
-                placeholder="Enter income description" 
+                placeholder="Enter income name" 
                 required
                 />
             </div>
@@ -96,7 +96,7 @@ function AddIncomeModal({show, onClose}){
                     <p className="flex items-center gap-2">
                     {currencyFormatter(i.amount)}
                     <button onClick={() => { deleteIncomeEntryHandler(i.id) }}>
-                        <FaTrashAlt color="#cb4335"/>
+                        <FaTrashAlt className="delete"/>
                     </button>
                     </p>
                 </div>

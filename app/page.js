@@ -59,8 +59,8 @@ export default function Home() {
       
       <main className="container max-w-2xl px-6 mx-auto">
         <section className="py-3">
-          <small className="text-gray-400 text-md">My Balance</small>
-          <h2 className="text-4xl font-bold">{currencyFormatter(balance)}</h2>
+          <small className="text-gray-400 text-md font-barlow">My Balance</small>
+          <h2 className="text-4xl font-bold font-barlow">{currencyFormatter(balance)}</h2>
         </section>
 
         <section className="flex items-center gap-3 py-3">
@@ -82,7 +82,7 @@ export default function Home() {
 
         {/* Expenses */}
         <section className="py-6">
-          <h3 className="text-2xl">My Expenses</h3>
+          <h3 className="text-2xl font-semibold">My Expenses</h3>
           <div className="flex flex-col gap-4 mt-6">
             {expenses.map(expense => {
               return(
@@ -98,7 +98,7 @@ export default function Home() {
         {/* Chart Section */}
         <section className="py-6">
           <a id="stats" />
-          <h3 className="text-2xl">Stats</h3>
+          <h3 className="text-2xl font-semibold">Stats</h3>
           <div className="w-1/2 mx-auto">
             <Doughnut data={{
               labels: expenses.map((expense) => expense.title),
